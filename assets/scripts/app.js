@@ -38,13 +38,7 @@ function writeToLog(ev, val, monsterHealth, playerHealth){
     if(ev === LOG_EVENT_PLAYER_ATTACK){
         logEntry.target = 'Monster';
     } else if (ev === LOG_EVENT_PLAYER_STRONG_ATTACK) {
-        logEntry = {
-            event : ev,
-            value : val,
-            target: 'Monster',
-            finalMonsterHealth : monsterHealth,
-            finalPlayerHealth : playerHealth
-        };
+        logEntry.target = 'Monster';
     }else if (ev === LOG_EVENT_MONSTER_ATTACK) {
         logEntry = {
             event : ev,
